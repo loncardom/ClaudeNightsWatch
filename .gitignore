@@ -1,0 +1,46 @@
+# User-specific task files
+task.md
+rules.md
+
+# Logs and runtime files
+logs/
+*.log
+*.pid
+.claude-*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+*.swp
+*.swo
+*~
+.idea/
+.vscode/
+
+# Temporary files
+*.tmp
+*.bak
+*.backup
+
+# Node modules (if using ccusage locally)
+node_modules/
+package-lock.json
+
+# Python (if tasks involve Python)
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Environment files
+.env
+.env.local
+
+# Output directories
+output/
+results/
+reports/
