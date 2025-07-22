@@ -3,8 +3,8 @@
 # Test script to execute task immediately without waiting for renewal window
 
 LOG_FILE="${CLAUDE_NIGHTS_WATCH_DIR:-$(pwd)}/logs/claude-nights-watch-test.log"
-TASK_FILE="test-todo-tasks.md"
-RULES_FILE="test-todo-rules.md"
+TASK_FILE="${TASK_FILE:-task.md}"
+RULES_FILE="${RULES_FILE:-rules.md}"
 TASK_DIR="${CLAUDE_NIGHTS_WATCH_DIR:-$(pwd)}"
 
 # Ensure logs directory exists

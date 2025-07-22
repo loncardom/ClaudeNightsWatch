@@ -25,7 +25,7 @@ echo ""
 
 # Run the test
 echo "Running test execution..."
-./test-immediate-execution.sh
+./test/test-immediate-execution.sh
 
 # Restore original files
 mv task.md.bak task.md 2>/dev/null || true
