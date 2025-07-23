@@ -84,25 +84,59 @@ get_minutes_until_reset() {
         return 1
     fi
     
-    # Try to get time remaining from ccusage
-    local output=$($ccusage_cmd blocks 2>/dev/null | grep -i "time remaining" | head -1)
+    # Use JSON output with --active flag to get only the active block
+    local json_output=$($ccusage_cmd blocks --json --active 2>/dev/null)
     
-    if [ -z "$output" ]; then
-        output=$($ccusage_cmd blocks --live 2>/dev/null | grep -i "remaining" | head -1)
+    if [ -z "$json_output" ]; then
+        # No active block - fallback to 0 like original behavior
+        echo "0"
+        return 0
     fi
     
-    # Parse time
-    local hours=0
-    local minutes=0
+    # Extract endTime from the active block
+    local end_time=$(echo "$json_output" | grep '"endTime"' | head -1 | sed 's/.*"endTime": *"\([^"]*\)".*/\1/')
     
-    if [[ "$output" =~ ([0-9]+)h[[:space:]]*([0-9]+)m ]]; then
-        hours=${BASH_REMATCH[1]}
-        minutes=${BASH_REMATCH[2]}
-    elif [[ "$output" =~ ([0-9]+)m ]]; then
-        minutes=${BASH_REMATCH[1]}
+    if [ -z "$end_time" ]; then
+        echo "0"
+        return 0
     fi
     
-    echo $((hours * 60 + minutes))
+    # Convert ISO timestamp to Unix epoch for calculation
+    local end_epoch
+    if command -v date &> /dev/null; then
+        # Try different date command formats (macOS vs Linux)
+        # Linux format (handles UTC properly)
+        if end_epoch=$(date -d "$end_time" +%s 2>/dev/null); then
+            :
+        # macOS format - need to specify UTC timezone
+        elif end_epoch=$(TZ=UTC date -j -f "%Y-%m-%dT%H:%M:%S.000Z" "$end_time" +%s 2>/dev/null); then
+            :
+        # macOS format without milliseconds in UTC
+        elif end_epoch=$(TZ=UTC date -j -f "%Y-%m-%dT%H:%M:%SZ" "$end_time" +%s 2>/dev/null); then
+            :
+        # Try stripping the .000Z and parsing in UTC
+        elif stripped_time=$(echo "$end_time" | sed 's/\.000Z$/Z/') && end_epoch=$(TZ=UTC date -j -f "%Y-%m-%dT%H:%M:%SZ" "$stripped_time" +%s 2>/dev/null); then
+            :
+        else
+            log_message "Could not parse ccusage endTime format: $end_time" >&2
+            echo "0"
+            return 0
+        fi
+    else
+        echo "0"
+        return 0
+    fi
+    
+    local current_epoch=$(date +%s)
+    local time_diff=$((end_epoch - current_epoch))
+    local remaining_minutes=$((time_diff / 60))
+    
+    if [ "$remaining_minutes" -gt 0 ]; then
+        echo $remaining_minutes
+    else
+        echo "0"
+        return 0
+    fi
 }
 
 # Function to prepare task with rules
@@ -191,7 +225,7 @@ calculate_sleep_duration() {
     local minutes_remaining=$(get_minutes_until_reset)
     
     if [ -n "$minutes_remaining" ] && [ "$minutes_remaining" -gt 0 ]; then
-        log_message "Time remaining: $minutes_remaining minutes"
+        log_message "Time remaining: $minutes_remaining minutes" >&2
         
         if [ "$minutes_remaining" -le 5 ]; then
             # Check every 30 seconds when close to reset
@@ -246,6 +280,7 @@ main() {
     log_message "PID: $$"
     log_message "Logs: $LOG_FILE"
     log_message "Task directory: $TASK_DIR"
+    
     
     # Check for task file
     if [ ! -f "$TASK_DIR/$TASK_FILE" ]; then

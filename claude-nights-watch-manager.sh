@@ -88,32 +88,36 @@ start_daemon() {
     export CLAUDE_NIGHTS_WATCH_DIR="$TASK_DIR"
     nohup "$DAEMON_SCRIPT" > /dev/null 2>&1 &
     
-    sleep 2
-    
-    if [ -f "$PID_FILE" ]; then
-        PID=$(cat "$PID_FILE")
-        if kill -0 "$PID" 2>/dev/null; then
-            print_status "Daemon started successfully with PID $PID"
-            if [ -f "$START_TIME_FILE" ]; then
-                START_EPOCH=$(cat "$START_TIME_FILE")
-                print_status "Will begin task execution at: $(date -d "@$START_EPOCH" 2>/dev/null || date -r "$START_EPOCH")"
+    # Wait for daemon to start with retry logic
+    for i in {1..5}; do
+        sleep 1
+        if [ -f "$PID_FILE" ]; then
+            PID=$(cat "$PID_FILE")
+            if kill -0 "$PID" 2>/dev/null; then
+                print_status "Daemon started successfully with PID $PID"
+                
+                if [ -f "$START_TIME_FILE" ]; then
+                    START_EPOCH=$(cat "$START_TIME_FILE")
+                    print_status "Will begin task execution at: $(date -d "@$START_EPOCH" 2>/dev/null || date -r "$START_EPOCH")"
+                fi
+                print_status "Logs: $LOG_FILE"
+                
+                # Show task preview
+                if [ -f "$TASK_DIR/$TASK_FILE" ]; then
+                    echo ""
+                    print_task "Task preview (first 5 lines):"
+                    head -5 "$TASK_DIR/$TASK_FILE" | sed 's/^/  /'
+                    echo "  ..."
+                fi
+                
+                return 0
             fi
-            print_status "Logs: $LOG_FILE"
-            
-            # Show task preview
-            if [ -f "$TASK_DIR/$TASK_FILE" ]; then
-                echo ""
-                print_task "Task preview (first 5 lines):"
-                head -5 "$TASK_DIR/$TASK_FILE" | sed 's/^/  /'
-                echo "  ..."
-            fi
-            
-            return 0
         fi
-    fi
-    
-    print_error "Failed to start daemon"
-    return 1
+        if [ $i -eq 5 ]; then
+            print_error "Failed to start daemon"
+            return 1
+        fi
+    done
 }
 
 stop_daemon() {
