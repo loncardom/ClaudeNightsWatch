@@ -3,7 +3,8 @@
 # Claude Nights Watch Log Viewer
 
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
-LOG_DIR="$SCRIPT_DIR/logs"
+TASK_DIR="${CLAUDE_NIGHTS_WATCH_DIR:-$(pwd)}"
+LOG_DIR="$TASK_DIR/logs"
 
 # Colors
 GREEN='\033[0;32m'

@@ -3,13 +3,12 @@
 # Claude Nights Watch Manager - Start, stop, and manage the task execution daemon
 
 DAEMON_SCRIPT="$(cd "$(dirname "$0")" && pwd)/claude-nights-watch-daemon.sh"
-SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
-PID_FILE="$SCRIPT_DIR/logs/claude-nights-watch-daemon.pid"
-LOG_FILE="$SCRIPT_DIR/logs/claude-nights-watch-daemon.log"
-START_TIME_FILE="$SCRIPT_DIR/logs/claude-nights-watch-start-time"
+TASK_DIR="${CLAUDE_NIGHTS_WATCH_DIR:-$(pwd)}"
+PID_FILE="$TASK_DIR/logs/claude-nights-watch-daemon.pid"
+LOG_FILE="$TASK_DIR/logs/claude-nights-watch-daemon.log"
+START_TIME_FILE="$TASK_DIR/logs/claude-nights-watch-start-time"
 TASK_FILE="task.md"
 RULES_FILE="rules.md"
-TASK_DIR="${CLAUDE_NIGHTS_WATCH_DIR:-$(pwd)}"
 
 # Colors for output
 RED='\033[0;31m'
