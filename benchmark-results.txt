@@ -1,0 +1,16 @@
+Timestamp: Sun Jul 27 20:19:02 BST 2025
+System: Linux DESKTOP-9TK96KN 6.6.87.2-microsoft-standard-WSL2 #1 SMP PREEMPT_DYNAMIC Thu Jun  5 18:30:46 UTC 2025 x86_64 x86_64 x86_64 GNU/Linux
+Function,Iterations,AvgNanoseconds,AvgMilliseconds
+prepare_task_prompt,1000,3927470,3.927
+calculate_sleep_duration,1000,3181087,3.181
+get_ccusage_cmd,100,74682461,74.682
+file_read_small,1000,831754,.831
+file_read_1k,100,833376,.833
+file_read_10k,100,1182031,1.182
+file_read_100k,10,1056331,1.056
+date_operations,1000,868865,.868
+wc_operations,1000,821024,.821
+grep_operations,1000,1102790,1.102
+string_concatenation,1000,43097,.043
+command_substitution,1000,449912,.449
+prepare_task_prompt,memory,3328KB

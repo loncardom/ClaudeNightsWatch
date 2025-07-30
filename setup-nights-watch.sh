@@ -106,7 +106,7 @@ create_rules_file() {
    - DDoS attempts
    - Unauthorized access attempts
 
-4. **STAY IN PROJECT SCOPE**: 
+4. **STAY IN PROJECT SCOPE**:
    - Only work within the designated project directory
    - Do not access or modify files outside the project
 
@@ -149,15 +149,15 @@ setup_daemon() {
     echo ""
     echo "=== Daemon Configuration ==="
     echo ""
-    
+
     read -p "Do you want to start the daemon after setup? (y/n) " -n 1 -r
     echo
     START_NOW=$REPLY
-    
+
     if [[ $START_NOW =~ ^[Yy]$ ]]; then
         read -p "Do you want to schedule a start time? (y/n) " -n 1 -r
         echo
-        
+
         if [[ $REPLY =~ ^[Yy]$ ]]; then
             echo "Enter start time (HH:MM for today, or YYYY-MM-DD HH:MM):"
             read START_TIME
@@ -170,26 +170,26 @@ setup_daemon() {
 
 main() {
     print_header
-    
+
     # Check prerequisites
     echo "Checking prerequisites..."
     check_claude || exit 1
     check_ccusage
     echo ""
-    
+
     # Create/edit task file
     echo "=== Task Configuration ==="
     create_task_file
     echo ""
-    
+
     # Create/edit rules file
     echo "=== Safety Rules Configuration ==="
     create_rules_file
     echo ""
-    
+
     # Setup daemon
     setup_daemon
-    
+
     # Summary
     echo ""
     echo "=== Setup Complete ==="
@@ -199,7 +199,7 @@ main() {
     fi
     print_success "Manager: $MANAGER_SCRIPT"
     echo ""
-    
+
     # Show available commands
     echo "Available commands:"
     echo "  ./claude-nights-watch-manager.sh start    - Start the daemon"
@@ -208,7 +208,7 @@ main() {
     echo "  ./claude-nights-watch-manager.sh logs     - View logs"
     echo "  ./claude-nights-watch-manager.sh task     - View current task"
     echo ""
-    
+
     # Start daemon if requested
     if [[ $START_NOW =~ ^[Yy]$ ]]; then
         echo "Starting daemon..."
@@ -217,7 +217,7 @@ main() {
         echo "To start the daemon later, run:"
         echo "  ./claude-nights-watch-manager.sh start"
     fi
-    
+
     echo ""
     print_warning "Remember: The daemon will execute tasks autonomously!"
     print_warning "Always review your task.md and rules.md files carefully."

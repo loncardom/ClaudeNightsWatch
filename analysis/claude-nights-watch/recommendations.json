@@ -1,0 +1,165 @@
+{
+  "generated_at": "2025-07-28T19:43:48Z",
+  "source_analysis": "/home/faz/development/ClaudeNightsWatch/analysis/claude-nights-watch/analysis-results.json",
+  "recommendations": [
+    {
+      "id": "python-analysis-rec-1",
+      "title": "Fix 5 bugs issues in main.py",
+      "description": "Address 5 bugs issues found in /home/faz/development/ClaudeNightsWatch/test-python-project/main.py. Issues include: 'os' imported but unused",
+      "priority": "low",
+      "category": "bugs",
+      "target_file": "/home/faz/development/ClaudeNightsWatch/test-python-project/main.py",
+      "issues_count": 5,
+      "estimated_effort_minutes": 120,
+      "sample_issues": [
+        "'os' imported but unused",
+        "'sys' imported but unused",
+        "local variable 'api_key' is assigned to but never used"
+      ],
+      "created_at": "2025-07-28T19:43:48Z"
+    },
+    {
+      "id": "python-analysis-rec-2",
+      "title": "Fix 1 security issues in main.py",
+      "description": "Address 1 security issues found in /home/faz/development/ClaudeNightsWatch/test-python-project/main.py. Issues include: Call to requests without timeout",
+      "priority": "low",
+      "category": "security",
+      "target_file": "/home/faz/development/ClaudeNightsWatch/test-python-project/main.py",
+      "issues_count": 1,
+      "estimated_effort_minutes": 20,
+      "sample_issues": [
+        "Call to requests without timeout"
+      ],
+      "created_at": "2025-07-28T19:43:48Z"
+    },
+    {
+      "id": "python-analysis-rec-3",
+      "title": "Fix 10 style issues in main.py",
+      "description": "Address 10 style issues found in /home/faz/development/ClaudeNightsWatch/test-python-project/main.py. Issues include: blank line contains whitespace",
+      "priority": "low",
+      "category": "style",
+      "target_file": "/home/faz/development/ClaudeNightsWatch/test-python-project/main.py",
+      "issues_count": 10,
+      "estimated_effort_minutes": 50,
+      "sample_issues": [
+        "blank line contains whitespace",
+        "line too long (179 > 100 characters)",
+        "no newline at end of file"
+      ],
+      "created_at": "2025-07-28T19:43:48Z"
+    },
+    {
+      "id": "python-analysis-rec-1",
+      "title": "Fix 1 style issues in setup.py",
+      "description": "Address 1 style issues found in /home/faz/development/ClaudeNightsWatch/test-python-project/setup.py. Issues include: no newline at end of file",
+      "priority": "low",
+      "category": "style",
+      "target_file": "/home/faz/development/ClaudeNightsWatch/test-python-project/setup.py",
+      "issues_count": 1,
+      "estimated_effort_minutes": 5,
+      "sample_issues": [
+        "no newline at end of file"
+      ],
+      "created_at": "2025-07-28T19:43:48Z"
+    },
+    {
+      "id": "python-analysis-rec-1",
+      "title": "Fix 6 style issues in utils.py",
+      "description": "Address 6 style issues found in /home/faz/development/ClaudeNightsWatch/test-python-project/utils.py. Issues include: blank line contains whitespace",
+      "priority": "low",
+      "category": "style",
+      "target_file": "/home/faz/development/ClaudeNightsWatch/test-python-project/utils.py",
+      "issues_count": 6,
+      "estimated_effort_minutes": 30,
+      "sample_issues": [
+        "blank line contains whitespace",
+        "no newline at end of file"
+      ],
+      "created_at": "2025-07-28T19:43:48Z"
+    },
+    {
+      "id": "python-analysis-rec-1",
+      "title": "Fix 1 complexity issues in main.py",
+      "description": "Address 1 complexity issues found in test-python-project/main.py. Issues include: Unnecessary \"else\" after \"return\", remove the \"else\" and de-indent the code inside it",
+      "priority": "low",
+      "category": "complexity",
+      "target_file": "test-python-project/main.py",
+      "issues_count": 1,
+      "estimated_effort_minutes": 30,
+      "sample_issues": [
+        "Unnecessary \"else\" after \"return\", remove the \"else\" and de-indent the code inside it"
+      ],
+      "created_at": "2025-07-28T19:43:49Z"
+    },
+    {
+      "id": "python-analysis-rec-2",
+      "title": "Fix 15 style issues in main.py",
+      "description": "Address 15 style issues found in test-python-project/main.py. Issues include: Final newline missing",
+      "priority": "low",
+      "category": "style",
+      "target_file": "test-python-project/main.py",
+      "issues_count": 15,
+      "estimated_effort_minutes": 75,
+      "sample_issues": [
+        "Final newline missing",
+        "Missing timeout argument for method 'requests.get' can cause your program to hang indefinitely",
+        "Trailing whitespace"
+      ],
+      "created_at": "2025-07-28T19:43:49Z"
+    },
+    {
+      "id": "python-analysis-rec-1",
+      "title": "Fix 1 style issues in setup.py",
+      "description": "Address 1 style issues found in test-python-project/setup.py. Issues include: Final newline missing",
+      "priority": "low",
+      "category": "style",
+      "target_file": "test-python-project/setup.py",
+      "issues_count": 1,
+      "estimated_effort_minutes": 5,
+      "sample_issues": [
+        "Final newline missing"
+      ],
+      "created_at": "2025-07-28T19:43:49Z"
+    },
+    {
+      "id": "python-analysis-rec-1",
+      "title": "Fix 8 style issues in utils.py",
+      "description": "Address 8 style issues found in test-python-project/utils.py. Issues include: Final newline missing",
+      "priority": "low",
+      "category": "style",
+      "target_file": "test-python-project/utils.py",
+      "issues_count": 8,
+      "estimated_effort_minutes": 40,
+      "sample_issues": [
+        "Final newline missing",
+        "Import outside toplevel (json)",
+        "Trailing whitespace"
+      ],
+      "created_at": "2025-07-28T19:43:49Z"
+    },
+    {
+      "id": "python-analysis-rec-2",
+      "title": "Fix 1 type_issues issues in utils.py",
+      "description": "Address 1 type_issues issues found in test-python-project/utils.py. Issues include: Need type annotation for \"config\" (hint: \"config: dict[<type>, <type>] = ...\") ",
+      "priority": "low",
+      "category": "type_issues",
+      "target_file": "test-python-project/utils.py",
+      "issues_count": 1,
+      "estimated_effort_minutes": 10,
+      "sample_issues": [
+        "Need type annotation for \"config\" (hint: \"config: dict[<type>, <type>] = ...\") "
+      ],
+      "created_at": "2025-07-28T19:43:49Z"
+    }
+  ],
+  "summary": {
+    "total_recommendations": 10,
+    "by_priority": {
+      "critical": 0,
+      "high": 0,
+      "medium": 0,
+      "low": 10
+    },
+    "estimated_total_effort_minutes": 385
+  }
+}

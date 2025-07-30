@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "gemini-mcp": {
+      "command": "/home/faz/mcp-servers/shared-mcp-env/bin/python",
+      "args": ["/home/faz/mcp-servers/gemini-mcp/gemini_mcp_server.py"],
+      "env": {
+        "GOOGLE_API_KEY": "AIzaSyBhvIsywlujNQWAmylWC9CcUvGZh779YZo",
+        "GEMINI_FLASH_MODEL": "gemini-2.5-flash",
+        "GEMINI_PRO_MODEL": "gemini-2.5-pro"
+      }
+    }
+  }
+}

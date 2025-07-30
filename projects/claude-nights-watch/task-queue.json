@@ -1,0 +1,465 @@
+{
+  "version": "1.0",
+  "project": "claude-nights-watch",
+  "created": "2025-07-28T19:30:00Z",
+  "last_updated": "2025-07-29T14:56:45Z",
+  "tasks": [
+    {
+      "id": "task-001",
+      "title": "Initial code review and cleanup",
+      "description": "Review the ClaudeNightsWatch codebase for potential improvements, fix any obvious issues, and clean up documentation",
+      "priority": "medium",
+      "status": "in_progress",
+      "created": "2025-07-28T19:30:00Z",
+      "updated": "2025-07-28T20:07:04Z",
+      "assigned_to": null,
+      "estimated_duration_minutes": 30,
+      "actual_duration_minutes": null,
+      "dependencies": [],
+      "tags": [
+        "cleanup",
+        "documentation",
+        "review"
+      ],
+      "execution_context": {
+        "working_directory": "/home/faz/development/ClaudeNightsWatch",
+        "required_tools": [
+          "git",
+          "claude"
+        ],
+        "safety_constraints": [
+          "no destructive operations",
+          "preserve existing functionality"
+        ],
+        "success_criteria": [
+          "All files pass basic linting",
+          "README is updated and accurate",
+          "No obvious code smells remain"
+        ]
+      },
+      "audit_trail": []
+    },
+    {
+      "id": "task-002",
+      "title": "Implement task queue validation",
+      "description": "Add validation functions to ensure task queue integrity and handle malformed JSON gracefully",
+      "priority": "high",
+      "status": "in_progress",
+      "created": "2025-07-28T19:30:00Z",
+      "updated": "2025-07-28T20:14:56Z",
+      "assigned_to": null,
+      "estimated_duration_minutes": 45,
+      "actual_duration_minutes": null,
+      "dependencies": [
+        "task-001"
+      ],
+      "tags": [
+        "validation",
+        "error-handling",
+        "robustness"
+      ],
+      "execution_context": {
+        "working_directory": "/home/faz/development/ClaudeNightsWatch",
+        "required_tools": [
+          "jq",
+          "bash"
+        ],
+        "safety_constraints": [
+          "validate all JSON input",
+          "graceful error handling"
+        ],
+        "success_criteria": [
+          "All JSON is validated before processing",
+          "Malformed queue files are handled gracefully",
+          "Error messages are clear and actionable"
+        ]
+      },
+      "audit_trail": []
+    },
+    {
+      "id": "task-003",
+      "title": "Test task queue system",
+      "description": "Verify that the new JSON-based task queue system is working correctly by executing this test task",
+      "priority": "high",
+      "status": "in_progress",
+      "created": "2025-07-28T18:27:09Z",
+      "updated": "2025-07-29T13:29:12Z",
+      "assigned_to": null,
+      "estimated_duration_minutes": 15,
+      "actual_duration_minutes": null,
+      "dependencies": [],
+      "tags": [],
+      "execution_context": {
+        "working_directory": "/home/faz/development/ClaudeNightsWatch",
+        "required_tools": [
+          "git",
+          "claude"
+        ],
+        "safety_constraints": [
+          "no destructive operations",
+          "preserve existing functionality"
+        ],
+        "success_criteria": [
+          "Task completed as described"
+        ]
+      },
+      "audit_trail": []
+    },
+    {
+      "id": "task-004",
+      "title": "Create test file",
+      "description": "Create a simple test.txt file with current timestamp to verify task queue execution works correctly",
+      "priority": "high",
+      "status": "in_progress",
+      "created": "2025-07-28T18:32:56Z",
+      "updated": "2025-07-29T13:29:49Z",
+      "assigned_to": null,
+      "estimated_duration_minutes": 5,
+      "actual_duration_minutes": null,
+      "dependencies": [],
+      "tags": [],
+      "execution_context": {
+        "working_directory": "/home/faz/development/ClaudeNightsWatch",
+        "required_tools": [
+          "git",
+          "claude"
+        ],
+        "safety_constraints": [
+          "no destructive operations",
+          "preserve existing functionality"
+        ],
+        "success_criteria": [
+          "Task completed as described"
+        ]
+      },
+      "audit_trail": []
+    },
+    {
+      "id": "task-005",
+      "title": "Simple Test Task",
+      "description": "Create a file called 'queue-test-result.txt' with the current date and time to prove the task queue system works",
+      "priority": "high",
+      "status": "in_progress",
+      "created": "2025-07-28T18:39:01Z",
+      "updated": "2025-07-29T13:32:23Z",
+      "assigned_to": null,
+      "estimated_duration_minutes": 2,
+      "actual_duration_minutes": null,
+      "dependencies": [],
+      "tags": [],
+      "execution_context": {
+        "working_directory": "/home/faz/development/ClaudeNightsWatch",
+        "required_tools": [
+          "git",
+          "claude"
+        ],
+        "safety_constraints": [
+          "no destructive operations",
+          "preserve existing functionality"
+        ],
+        "success_criteria": [
+          "Task completed as described"
+        ]
+      },
+      "audit_trail": []
+    },
+    {
+      "id": "task-006",
+      "title": "Fix 5 bugs issues in main.py",
+      "description": "Address 5 bugs issues found in /home/faz/development/ClaudeNightsWatch/test-python-project/main.py. Issues include: 'os' imported but unused\n\nTARGET FILE: /home/faz/development/ClaudeNightsWatch/test-python-project/main.py\nANALYSIS CATEGORY: bugs\nESTIMATED EFFORT: 120 minutes\n\nINSTRUCTIONS:\n1. Focus only on the issues identified in the target file\n2. Make minimal, surgical changes to address the specific problems\n3. Preserve existing functionality and behavior\n4. Follow Python best practices and PEP 8 style guidelines\n5. Add appropriate comments where code logic is complex\n6. Run basic tests after changes if available\n\nThis task was automatically generated by Python static code analysis.",
+      "priority": "low",
+      "status": "in_progress",
+      "created": "2025-07-28T19:43:49Z",
+      "updated": "2025-07-29T13:34:34Z",
+      "assigned_to": null,
+      "estimated_duration_minutes": 120,
+      "actual_duration_minutes": null,
+      "dependencies": [],
+      "tags": [],
+      "execution_context": {
+        "working_directory": "/home/faz/development/ClaudeNightsWatch",
+        "required_tools": [
+          "git",
+          "claude"
+        ],
+        "safety_constraints": [
+          "no destructive operations",
+          "preserve existing functionality"
+        ],
+        "success_criteria": [
+          "Task completed as described"
+        ]
+      },
+      "audit_trail": []
+    },
+    {
+      "id": "task-007",
+      "title": "Fix 1 security issues in main.py",
+      "description": "Address 1 security issues found in /home/faz/development/ClaudeNightsWatch/test-python-project/main.py. Issues include: Call to requests without timeout\n\nTARGET FILE: /home/faz/development/ClaudeNightsWatch/test-python-project/main.py\nANALYSIS CATEGORY: security\nESTIMATED EFFORT: 20 minutes\n\nINSTRUCTIONS:\n1. Focus only on the issues identified in the target file\n2. Make minimal, surgical changes to address the specific problems\n3. Preserve existing functionality and behavior\n4. Follow Python best practices and PEP 8 style guidelines\n5. Add appropriate comments where code logic is complex\n6. Run basic tests after changes if available\n\nThis task was automatically generated by Python static code analysis.",
+      "priority": "low",
+      "status": "in_progress",
+      "created": "2025-07-28T19:43:50Z",
+      "updated": "2025-07-29T14:39:02Z",
+      "assigned_to": null,
+      "estimated_duration_minutes": 20,
+      "actual_duration_minutes": null,
+      "dependencies": [],
+      "tags": [],
+      "execution_context": {
+        "working_directory": "/home/faz/development/ClaudeNightsWatch",
+        "required_tools": [
+          "git",
+          "claude"
+        ],
+        "safety_constraints": [
+          "no destructive operations",
+          "preserve existing functionality"
+        ],
+        "success_criteria": [
+          "Task completed as described"
+        ]
+      },
+      "audit_trail": []
+    },
+    {
+      "id": "task-008",
+      "title": "Fix 10 style issues in main.py",
+      "description": "Address 10 style issues found in /home/faz/development/ClaudeNightsWatch/test-python-project/main.py. Issues include: blank line contains whitespace\n\nTARGET FILE: /home/faz/development/ClaudeNightsWatch/test-python-project/main.py\nANALYSIS CATEGORY: style\nESTIMATED EFFORT: 50 minutes\n\nINSTRUCTIONS:\n1. Focus only on the issues identified in the target file\n2. Make minimal, surgical changes to address the specific problems\n3. Preserve existing functionality and behavior\n4. Follow Python best practices and PEP 8 style guidelines\n5. Add appropriate comments where code logic is complex\n6. Run basic tests after changes if available\n\nThis task was automatically generated by Python static code analysis.",
+      "priority": "low",
+      "status": "completed",
+      "created": "2025-07-28T19:43:50Z",
+      "updated": "2025-07-29T14:49:08Z",
+      "assigned_to": null,
+      "estimated_duration_minutes": 50,
+      "actual_duration_minutes": 0,
+      "dependencies": [],
+      "tags": [],
+      "execution_context": {
+        "working_directory": "/home/faz/development/ClaudeNightsWatch",
+        "required_tools": [
+          "git",
+          "claude"
+        ],
+        "safety_constraints": [
+          "no destructive operations",
+          "preserve existing functionality"
+        ],
+        "success_criteria": [
+          "Task completed as described"
+        ]
+      },
+      "audit_trail": []
+    },
+    {
+      "id": "task-009",
+      "title": "Fix 1 style issues in setup.py",
+      "description": "Address 1 style issues found in /home/faz/development/ClaudeNightsWatch/test-python-project/setup.py. Issues include: no newline at end of file\n\nTARGET FILE: /home/faz/development/ClaudeNightsWatch/test-python-project/setup.py\nANALYSIS CATEGORY: style\nESTIMATED EFFORT: 5 minutes\n\nINSTRUCTIONS:\n1. Focus only on the issues identified in the target file\n2. Make minimal, surgical changes to address the specific problems\n3. Preserve existing functionality and behavior\n4. Follow Python best practices and PEP 8 style guidelines\n5. Add appropriate comments where code logic is complex\n6. Run basic tests after changes if available\n\nThis task was automatically generated by Python static code analysis.",
+      "priority": "low",
+      "status": "completed",
+      "created": "2025-07-28T19:43:50Z",
+      "updated": "2025-07-29T14:56:45Z",
+      "assigned_to": null,
+      "estimated_duration_minutes": 5,
+      "actual_duration_minutes": 2,
+      "dependencies": [],
+      "tags": [],
+      "execution_context": {
+        "working_directory": "/home/faz/development/ClaudeNightsWatch",
+        "required_tools": [
+          "git",
+          "claude"
+        ],
+        "safety_constraints": [
+          "no destructive operations",
+          "preserve existing functionality"
+        ],
+        "success_criteria": [
+          "Task completed as described"
+        ]
+      },
+      "audit_trail": []
+    },
+    {
+      "id": "task-010",
+      "title": "Fix 6 style issues in utils.py",
+      "description": "Address 6 style issues found in /home/faz/development/ClaudeNightsWatch/test-python-project/utils.py. Issues include: blank line contains whitespace\n\nTARGET FILE: /home/faz/development/ClaudeNightsWatch/test-python-project/utils.py\nANALYSIS CATEGORY: style\nESTIMATED EFFORT: 30 minutes\n\nINSTRUCTIONS:\n1. Focus only on the issues identified in the target file\n2. Make minimal, surgical changes to address the specific problems\n3. Preserve existing functionality and behavior\n4. Follow Python best practices and PEP 8 style guidelines\n5. Add appropriate comments where code logic is complex\n6. Run basic tests after changes if available\n\nThis task was automatically generated by Python static code analysis.",
+      "priority": "low",
+      "status": "pending",
+      "created": "2025-07-28T19:43:50Z",
+      "updated": "2025-07-28T19:43:50Z",
+      "assigned_to": null,
+      "estimated_duration_minutes": 30,
+      "actual_duration_minutes": null,
+      "dependencies": [],
+      "tags": [],
+      "execution_context": {
+        "working_directory": "/home/faz/development/ClaudeNightsWatch",
+        "required_tools": [
+          "git",
+          "claude"
+        ],
+        "safety_constraints": [
+          "no destructive operations",
+          "preserve existing functionality"
+        ],
+        "success_criteria": [
+          "Task completed as described"
+        ]
+      },
+      "audit_trail": []
+    },
+    {
+      "id": "task-011",
+      "title": "Fix 1 complexity issues in main.py",
+      "description": "Address 1 complexity issues found in test-python-project/main.py. Issues include: Unnecessary \"else\" after \"return\", remove the \"else\" and de-indent the code inside it\n\nTARGET FILE: test-python-project/main.py\nANALYSIS CATEGORY: complexity\nESTIMATED EFFORT: 30 minutes\n\nINSTRUCTIONS:\n1. Focus only on the issues identified in the target file\n2. Make minimal, surgical changes to address the specific problems\n3. Preserve existing functionality and behavior\n4. Follow Python best practices and PEP 8 style guidelines\n5. Add appropriate comments where code logic is complex\n6. Run basic tests after changes if available\n\nThis task was automatically generated by Python static code analysis.",
+      "priority": "low",
+      "status": "pending",
+      "created": "2025-07-28T19:43:50Z",
+      "updated": "2025-07-28T19:43:50Z",
+      "assigned_to": null,
+      "estimated_duration_minutes": 30,
+      "actual_duration_minutes": null,
+      "dependencies": [],
+      "tags": [],
+      "execution_context": {
+        "working_directory": "/home/faz/development/ClaudeNightsWatch",
+        "required_tools": [
+          "git",
+          "claude"
+        ],
+        "safety_constraints": [
+          "no destructive operations",
+          "preserve existing functionality"
+        ],
+        "success_criteria": [
+          "Task completed as described"
+        ]
+      },
+      "audit_trail": []
+    },
+    {
+      "id": "task-012",
+      "title": "Fix 15 style issues in main.py",
+      "description": "Address 15 style issues found in test-python-project/main.py. Issues include: Final newline missing\n\nTARGET FILE: test-python-project/main.py\nANALYSIS CATEGORY: style\nESTIMATED EFFORT: 75 minutes\n\nINSTRUCTIONS:\n1. Focus only on the issues identified in the target file\n2. Make minimal, surgical changes to address the specific problems\n3. Preserve existing functionality and behavior\n4. Follow Python best practices and PEP 8 style guidelines\n5. Add appropriate comments where code logic is complex\n6. Run basic tests after changes if available\n\nThis task was automatically generated by Python static code analysis.",
+      "priority": "low",
+      "status": "pending",
+      "created": "2025-07-28T19:43:50Z",
+      "updated": "2025-07-28T19:43:50Z",
+      "assigned_to": null,
+      "estimated_duration_minutes": 75,
+      "actual_duration_minutes": null,
+      "dependencies": [],
+      "tags": [],
+      "execution_context": {
+        "working_directory": "/home/faz/development/ClaudeNightsWatch",
+        "required_tools": [
+          "git",
+          "claude"
+        ],
+        "safety_constraints": [
+          "no destructive operations",
+          "preserve existing functionality"
+        ],
+        "success_criteria": [
+          "Task completed as described"
+        ]
+      },
+      "audit_trail": []
+    },
+    {
+      "id": "task-013",
+      "title": "Fix 1 style issues in setup.py",
+      "description": "Address 1 style issues found in test-python-project/setup.py. Issues include: Final newline missing\n\nTARGET FILE: test-python-project/setup.py\nANALYSIS CATEGORY: style\nESTIMATED EFFORT: 5 minutes\n\nINSTRUCTIONS:\n1. Focus only on the issues identified in the target file\n2. Make minimal, surgical changes to address the specific problems\n3. Preserve existing functionality and behavior\n4. Follow Python best practices and PEP 8 style guidelines\n5. Add appropriate comments where code logic is complex\n6. Run basic tests after changes if available\n\nThis task was automatically generated by Python static code analysis.",
+      "priority": "low",
+      "status": "pending",
+      "created": "2025-07-28T19:43:51Z",
+      "updated": "2025-07-28T19:43:51Z",
+      "assigned_to": null,
+      "estimated_duration_minutes": 5,
+      "actual_duration_minutes": null,
+      "dependencies": [],
+      "tags": [],
+      "execution_context": {
+        "working_directory": "/home/faz/development/ClaudeNightsWatch",
+        "required_tools": [
+          "git",
+          "claude"
+        ],
+        "safety_constraints": [
+          "no destructive operations",
+          "preserve existing functionality"
+        ],
+        "success_criteria": [
+          "Task completed as described"
+        ]
+      },
+      "audit_trail": []
+    },
+    {
+      "id": "task-014",
+      "title": "Fix 8 style issues in utils.py",
+      "description": "Address 8 style issues found in test-python-project/utils.py. Issues include: Final newline missing\n\nTARGET FILE: test-python-project/utils.py\nANALYSIS CATEGORY: style\nESTIMATED EFFORT: 40 minutes\n\nINSTRUCTIONS:\n1. Focus only on the issues identified in the target file\n2. Make minimal, surgical changes to address the specific problems\n3. Preserve existing functionality and behavior\n4. Follow Python best practices and PEP 8 style guidelines\n5. Add appropriate comments where code logic is complex\n6. Run basic tests after changes if available\n\nThis task was automatically generated by Python static code analysis.",
+      "priority": "low",
+      "status": "pending",
+      "created": "2025-07-28T19:43:51Z",
+      "updated": "2025-07-28T19:43:51Z",
+      "assigned_to": null,
+      "estimated_duration_minutes": 40,
+      "actual_duration_minutes": null,
+      "dependencies": [],
+      "tags": [],
+      "execution_context": {
+        "working_directory": "/home/faz/development/ClaudeNightsWatch",
+        "required_tools": [
+          "git",
+          "claude"
+        ],
+        "safety_constraints": [
+          "no destructive operations",
+          "preserve existing functionality"
+        ],
+        "success_criteria": [
+          "Task completed as described"
+        ]
+      },
+      "audit_trail": []
+    },
+    {
+      "id": "task-015",
+      "title": "Fix 1 type_issues issues in utils.py",
+      "description": "Address 1 type_issues issues found in test-python-project/utils.py. Issues include: Need type annotation for \"config\" (hint: \"config: dict[<type>, <type>] = ...\") \n\nTARGET FILE: test-python-project/utils.py\nANALYSIS CATEGORY: type_issues\nESTIMATED EFFORT: 10 minutes\n\nINSTRUCTIONS:\n1. Focus only on the issues identified in the target file\n2. Make minimal, surgical changes to address the specific problems\n3. Preserve existing functionality and behavior\n4. Follow Python best practices and PEP 8 style guidelines\n5. Add appropriate comments where code logic is complex\n6. Run basic tests after changes if available\n\nThis task was automatically generated by Python static code analysis.",
+      "priority": "low",
+      "status": "pending",
+      "created": "2025-07-28T19:43:51Z",
+      "updated": "2025-07-28T19:43:51Z",
+      "assigned_to": null,
+      "estimated_duration_minutes": 10,
+      "actual_duration_minutes": null,
+      "dependencies": [],
+      "tags": [],
+      "execution_context": {
+        "working_directory": "/home/faz/development/ClaudeNightsWatch",
+        "required_tools": [
+          "git",
+          "claude"
+        ],
+        "safety_constraints": [
+          "no destructive operations",
+          "preserve existing functionality"
+        ],
+        "success_criteria": [
+          "Task completed as described"
+        ]
+      },
+      "audit_trail": []
+    }
+  ],
+  "queue_metadata": {
+    "total_tasks": 15,
+    "pending_tasks": 6,
+    "in_progress_tasks": 7,
+    "completed_tasks": 2,
+    "failed_tasks": 1,
+    "next_task_id": "task-016"
+  }
+}

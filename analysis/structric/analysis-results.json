@@ -1,0 +1,42 @@
+{
+  "analysis_timestamp": "2025-07-29T19:28:47Z",
+  "target_directory": "/home/faz/development/structric",
+  "tools_executed": [],
+  "issues": [
+    {
+      "tool": "pylint",
+      "file": "/home/faz/development/structric/__init__.py",
+      "line": 1,
+      "column": 0,
+      "severity": "high",
+      "category": "bugs",
+      "message": "error while code parsing: Unable to load file /home/faz/development/structric/__init__.py:\n[Errno 2] No such file or directory: '/home/faz/development/structric/__init__.py'",
+      "rule_id": "",
+      "rule_name": "parse-error"
+    }
+  ],
+  "summary": {
+    "total_issues": 0,
+    "by_severity": {
+      "critical": 0,
+      "high": 0,
+      "medium": 0,
+      "low": 0,
+      "info": 0
+    },
+    "by_category": {
+      "style": 0,
+      "security": 0,
+      "bugs": 0,
+      "complexity": 0,
+      "type_issues": 0,
+      "performance": 0
+    },
+    "by_tool": {
+      "pylint": 0,
+      "flake8": 0,
+      "mypy": 0,
+      "bandit": 0
+    }
+  }
+}

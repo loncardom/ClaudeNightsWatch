@@ -1,0 +1,48 @@
+{
+  "is_python_project": true,
+  "analyzed_at": "2025-07-28T19:43:41Z",
+  "target_directory": "/home/faz/development/ClaudeNightsWatch",
+  "project_structure": {
+    "type": "generic",
+    "config_files": [],
+    "python_files_count": 3,
+    "test_framework": "none",
+    "has_type_hints": true
+  },
+  "analysis_tools": {
+    "pylint": {
+      "available": true,
+      "version": "3.3.7"
+    },
+    "flake8": {
+      "available": true,
+      "version": "7.3.0\n0.7.0\n2.14.0\n3.4.0\n3.10.12"
+    },
+    "mypy": {
+      "available": true,
+      "version": "1.17.0"
+    },
+    "bandit": {
+      "available": true,
+      "version": "1.8.6\n3.10.12\n11.4.0"
+    }
+  },
+  "analysis_results": {
+    "total_issues": 0,
+    "by_severity": {
+      "critical": 0,
+      "high": 0,
+      "medium": 0,
+      "low": 0,
+      "info": 0
+    },
+    "by_category": {
+      "style": 0,
+      "security": 0,
+      "bugs": 0,
+      "complexity": 0,
+      "type_issues": 0,
+      "performance": 0
+    }
+  }
+}

@@ -1,6 +1,6 @@
 # Contributing to Claude Nights Watch
 
-Thank you for your interest in contributing to Claude Nights Watch! 
+Thank you for your interest in contributing to Claude Nights Watch!
 
 ## How to Contribute
 

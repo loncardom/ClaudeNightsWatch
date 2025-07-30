@@ -55,7 +55,7 @@ Claude Nights Watch extends the auto-renewal concept to create a fully autonomou
 1. **Create your task file** (`task.md`):
    ```markdown
    # Daily Development Tasks
-   
+
    1. Run linting on all source files
    2. Update dependencies to latest versions
    3. Run the test suite
@@ -66,7 +66,7 @@ Claude Nights Watch extends the auto-renewal concept to create a fully autonomou
 2. **Create safety rules** (`rules.md`):
    ```markdown
    # Safety Rules
-   
+
    - Never delete files without backing up
    - Only work within the project directory
    - Always create feature branches for changes
@@ -143,7 +143,7 @@ The rules file defines safety constraints and best practices. It's prepended to 
 
 ## ⚠️ Safety Considerations
 
-**IMPORTANT**: This tool runs Claude with the `--dangerously-skip-permissions` flag, meaning it will execute tasks without asking for confirmation. 
+**IMPORTANT**: This tool runs Claude with the `--dangerously-skip-permissions` flag, meaning it will execute tasks without asking for confirmation.
 
 ### Best Practices:
 
@@ -261,7 +261,7 @@ Contributions are welcome! Please follow these steps:
 
 Please ensure:
 - Code follows existing style
-- Safety is prioritized  
+- Safety is prioritized
 - Documentation is updated
 - Examples are provided
 - Tests pass

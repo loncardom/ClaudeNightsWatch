@@ -1,0 +1,242 @@
+{
+  "version": "1.0",
+  "project": "structric",
+  "created": "2025-07-29T20:30:00Z",
+  "last_updated": "2025-07-29T20:19:24Z",
+  "tasks": [
+    {
+      "id": "task-001",
+      "title": "Create comprehensive README.md",
+      "description": "Create a detailed README.md file for the Structric project explaining its purpose, installation, and usage based on the setup.py configuration and project structure",
+      "priority": "high",
+      "status": "in_progress",
+      "created": "2025-07-29T20:30:00Z",
+      "updated": "2025-07-29T20:19:24Z",
+      "assigned_to": null,
+      "estimated_duration_minutes": 30,
+      "actual_duration_minutes": null,
+      "dependencies": [],
+      "tags": [
+        "documentation",
+        "readme",
+        "setup"
+      ],
+      "execution_context": {
+        "working_directory": "/home/faz/development/structric",
+        "required_tools": [
+          "git",
+          "claude"
+        ],
+        "safety_constraints": [
+          "only create new documentation files",
+          "preserve existing functionality",
+          "no code modifications initially"
+        ],
+        "success_criteria": [
+          "Professional README.md created",
+          "Installation instructions included",
+          "Usage examples provided",
+          "Project structure explained"
+        ]
+      },
+      "audit_trail": [],
+      "started_at": "2025-07-29T20:19:24Z"
+    },
+    {
+      "id": "task-002",
+      "title": "Review and fix setup.py configuration",
+      "description": "Review the setup.py file for best practices, ensure all dependencies are properly specified, and verify entry points are correctly configured",
+      "priority": "medium",
+      "status": "pending",
+      "created": "2025-07-29T20:35:00Z",
+      "updated": "2025-07-29T20:35:00Z",
+      "assigned_to": null,
+      "estimated_duration_minutes": 20,
+      "actual_duration_minutes": null,
+      "dependencies": [],
+      "tags": [
+        "setup",
+        "configuration",
+        "dependencies"
+      ],
+      "execution_context": {
+        "working_directory": "/home/faz/development/structric",
+        "required_tools": [
+          "git",
+          "claude",
+          "python"
+        ],
+        "safety_constraints": [
+          "preserve existing functionality",
+          "only improve configuration",
+          "no breaking changes"
+        ],
+        "success_criteria": [
+          "Setup.py follows best practices",
+          "All dependencies are current",
+          "Entry points work correctly"
+        ]
+      },
+      "audit_trail": []
+    },
+    {
+      "id": "task-003",
+      "title": "Code quality review - performance optimization",
+      "description": "Review the performance profiler and benchmark scripts (micro_benchmarks.py, performance_benchmark.py, etc.) for potential optimizations and code quality improvements",
+      "priority": "medium",
+      "status": "pending",
+      "created": "2025-07-29T20:35:00Z",
+      "updated": "2025-07-29T20:35:00Z",
+      "assigned_to": null,
+      "estimated_duration_minutes": 45,
+      "actual_duration_minutes": null,
+      "dependencies": [],
+      "tags": [
+        "performance",
+        "optimization",
+        "code-quality"
+      ],
+      "execution_context": {
+        "working_directory": "/home/faz/development/structric",
+        "required_tools": [
+          "git",
+          "claude",
+          "python"
+        ],
+        "safety_constraints": [
+          "preserve existing benchmarks",
+          "maintain performance measurement accuracy",
+          "no functional changes to core logic"
+        ],
+        "success_criteria": [
+          "Performance scripts are optimized",
+          "Code follows Python best practices",
+          "Benchmarks remain accurate"
+        ]
+      },
+      "audit_trail": []
+    },
+    {
+      "id": "task-004",
+      "title": "Test structure analysis and improvements",
+      "description": "Analyze the tests directory structure, review test coverage, and suggest improvements to the testing framework setup",
+      "priority": "high",
+      "status": "pending",
+      "created": "2025-07-29T20:35:00Z",
+      "updated": "2025-07-29T20:35:00Z",
+      "assigned_to": null,
+      "estimated_duration_minutes": 40,
+      "actual_duration_minutes": null,
+      "dependencies": [],
+      "tags": [
+        "testing",
+        "quality-assurance",
+        "structure"
+      ],
+      "execution_context": {
+        "working_directory": "/home/faz/development/structric",
+        "required_tools": [
+          "git",
+          "claude",
+          "python",
+          "pytest"
+        ],
+        "safety_constraints": [
+          "preserve existing test functionality",
+          "maintain test accuracy",
+          "no destructive changes to test data"
+        ],
+        "success_criteria": [
+          "Test structure is well organized",
+          "Test coverage analysis completed",
+          "Testing framework recommendations provided"
+        ]
+      },
+      "audit_trail": []
+    },
+    {
+      "id": "task-005",
+      "title": "Security audit - dependency and code review",
+      "description": "Perform security audit of dependencies in requirements.txt and setup.py, check for known vulnerabilities, and review code for security best practices",
+      "priority": "high",
+      "status": "pending",
+      "created": "2025-07-29T20:35:00Z",
+      "updated": "2025-07-29T20:35:00Z",
+      "assigned_to": null,
+      "estimated_duration_minutes": 35,
+      "actual_duration_minutes": null,
+      "dependencies": [],
+      "tags": [
+        "security",
+        "audit",
+        "dependencies"
+      ],
+      "execution_context": {
+        "working_directory": "/home/faz/development/structric",
+        "required_tools": [
+          "git",
+          "claude",
+          "python"
+        ],
+        "safety_constraints": [
+          "read-only security analysis",
+          "preserve existing functionality",
+          "no code execution during audit"
+        ],
+        "success_criteria": [
+          "Security vulnerabilities identified",
+          "Dependency audit completed",
+          "Security recommendations provided"
+        ]
+      },
+      "audit_trail": []
+    },
+    {
+      "id": "task-006",
+      "title": "Code style and linting cleanup",
+      "description": "Apply consistent code formatting using Black, fix linting issues with flake8, and ensure code follows PEP 8 standards across the codebase",
+      "priority": "medium",
+      "status": "pending",
+      "created": "2025-07-29T20:35:00Z",
+      "updated": "2025-07-29T20:35:00Z",
+      "assigned_to": null,
+      "estimated_duration_minutes": 25,
+      "actual_duration_minutes": null,
+      "dependencies": [],
+      "tags": [
+        "style",
+        "formatting",
+        "linting"
+      ],
+      "execution_context": {
+        "working_directory": "/home/faz/development/structric",
+        "required_tools": [
+          "git",
+          "claude",
+          "python",
+          "black",
+          "flake8"
+        ],
+        "safety_constraints": [
+          "only formatting changes",
+          "preserve code functionality",
+          "no logic modifications"
+        ],
+        "success_criteria": [
+          "Code follows PEP 8 standards",
+          "Consistent formatting applied",
+          "Linting issues resolved"
+        ]
+      },
+      "audit_trail": []
+    }
+  ],
+  "queue_metadata": {
+    "total_tasks": 6,
+    "pending_tasks": 5,
+    "in_progress_tasks": 1,
+    "completed_tasks": 0,
+    "failed_tasks": 0,
+    "next_task_id": "task-007"
+  }
+}

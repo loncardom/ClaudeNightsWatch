@@ -18,7 +18,7 @@ show_menu() {
     echo ""
     echo "Available log files:"
     echo ""
-    
+
     if [ -d "$LOG_DIR" ]; then
         local i=1
         for log in "$LOG_DIR"/*.log; do
@@ -34,7 +34,7 @@ show_menu() {
         echo "  No logs found in $LOG_DIR"
         exit 1
     fi
-    
+
     echo ""
     echo "Options:"
     echo "  f) Follow latest log (tail -f)"
@@ -49,7 +49,7 @@ show_menu() {
 view_log() {
     local log_file="$1"
     local mode="$2"
-    
+
     case "$mode" in
         "full")
             less "$log_file"
@@ -76,9 +76,9 @@ view_log() {
 while true; do
     clear
     show_menu
-    
+
     read -p "Select option: " choice
-    
+
     case "$choice" in
         [0-9]*)
             # Numeric selection - view specific log
@@ -92,7 +92,7 @@ while true; do
                 echo "4) View only responses"
                 echo "5) View only errors"
                 read -p "Select view mode: " view_mode
-                
+
                 case "$view_mode" in
                     1) view_log "$selected_log" "full" ;;
                     2) view_log "$selected_log" "tail" ;;
@@ -131,7 +131,7 @@ while true; do
             exit 0
             ;;
     esac
-    
+
     echo ""
     read -p "Press Enter to continue..."
 done
