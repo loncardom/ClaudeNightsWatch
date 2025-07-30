@@ -2,19 +2,19 @@
   "version": "1.0",
   "project": "structric",
   "created": "2025-07-29T20:30:00Z",
-  "last_updated": "2025-07-29T20:19:24Z",
+  "last_updated": "2025-07-30T16:46:59Z",
   "tasks": [
     {
       "id": "task-001",
       "title": "Create comprehensive README.md",
       "description": "Create a detailed README.md file for the Structric project explaining its purpose, installation, and usage based on the setup.py configuration and project structure",
       "priority": "high",
-      "status": "in_progress",
+      "status": "completed",
       "created": "2025-07-29T20:30:00Z",
-      "updated": "2025-07-29T20:19:24Z",
+      "updated": "2025-07-30T16:17:32Z",
       "assigned_to": null,
       "estimated_duration_minutes": 30,
-      "actual_duration_minutes": null,
+      "actual_duration_minutes": 1198,
       "dependencies": [],
       "tags": [
         "documentation",
@@ -121,9 +121,9 @@
       "title": "Test structure analysis and improvements",
       "description": "Analyze the tests directory structure, review test coverage, and suggest improvements to the testing framework setup",
       "priority": "high",
-      "status": "pending",
+      "status": "in_progress",
       "created": "2025-07-29T20:35:00Z",
-      "updated": "2025-07-29T20:35:00Z",
+      "updated": "2025-07-30T16:24:12Z",
       "assigned_to": null,
       "estimated_duration_minutes": 40,
       "actual_duration_minutes": null,
@@ -152,19 +152,20 @@
           "Testing framework recommendations provided"
         ]
       },
-      "audit_trail": []
+      "audit_trail": [],
+      "started_at": "2025-07-30T16:24:12Z"
     },
     {
       "id": "task-005",
       "title": "Security audit - dependency and code review",
       "description": "Perform security audit of dependencies in requirements.txt and setup.py, check for known vulnerabilities, and review code for security best practices",
       "priority": "high",
-      "status": "pending",
+      "status": "completed",
       "created": "2025-07-29T20:35:00Z",
-      "updated": "2025-07-29T20:35:00Z",
+      "updated": "2025-07-30T16:46:59Z",
       "assigned_to": null,
       "estimated_duration_minutes": 35,
-      "actual_duration_minutes": null,
+      "actual_duration_minutes": 8,
       "dependencies": [],
       "tags": [
         "security",
@@ -189,7 +190,8 @@
           "Security recommendations provided"
         ]
       },
-      "audit_trail": []
+      "audit_trail": [],
+      "started_at": "2025-07-30T16:38:20Z"
     },
     {
       "id": "task-006",
@@ -233,9 +235,9 @@
   ],
   "queue_metadata": {
     "total_tasks": 6,
-    "pending_tasks": 5,
+    "pending_tasks": 3,
     "in_progress_tasks": 1,
-    "completed_tasks": 0,
+    "completed_tasks": 2,
     "failed_tasks": 0,
     "next_task_id": "task-007"
   }
